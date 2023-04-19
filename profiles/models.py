@@ -15,4 +15,13 @@ class Profile(models.Model):
         upload_to='images/', default='../default_profile_de0exc' #this default is the file name from Cloudinary
     )
 
-   
+    class Meta:
+        """Meta class that will return  
+        our Profile instances in reverse order,  so the most recently created is first.  
+        The 'created_at' relate to created_at field name. And the minus sign at  
+        the beginning of the string, indicates  that we want our results in reverse.
+        """
+        ordering = ['-created_at']
+
+        def __str__(self):
+            return f"{self.owner} 's profile"

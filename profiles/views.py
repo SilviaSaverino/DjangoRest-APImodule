@@ -23,6 +23,7 @@ class ProfileDetail(APIView):
     """
     A view that returns the details of a single profile.
     """
+    serializer_class = ProfileSerializer
     def get_object(self, pk):
         """
         Retrieve a single profile instance by primary key 

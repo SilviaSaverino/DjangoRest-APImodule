@@ -15,7 +15,7 @@ from .models import Profile
 # that you don’t want to be included in the serializer.
 
 class ProfileSerializer(serializers.ModelSerializer):
-    owner = serializer.ReadOnlyField(source='owner_username')
+    owner = serializers.ReadOnlyField(source='owner_username')
 
     class Meta:
         model = Profile

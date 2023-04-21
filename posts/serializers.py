@@ -7,7 +7,7 @@ class PostSerializer(serializer.ModelSerializer):
     profile_id = serializer.ReadOnlyField(source='owner.profile.id')
     profile_image = serializer.ReadOnlyField(source='owner.profile.img.url')
 
-    def get_is_owner(PostSerializer):
+    def get_is_owner(self, obj):
         request = self.context['request']
         return request.user == obj.owner
 

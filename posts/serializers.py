@@ -1,11 +1,12 @@
 from rest_framework import serializers
 from posts.models import Post
 
-class PostSerializer(serializer.ModelSerializer):
-    owner = serializer.ReadOnlyField(source='owner_username')
-    is_owner = serializer.SerializerMethodField()
-    profile_id = serializer.ReadOnlyField(source='owner.profile.id')
-    profile_image = serializer.ReadOnlyField(source='owner.profile.img.url')
+
+class PostSerializer(serializers.ModelSerializer):
+    owner = serializers.ReadOnlyField(source='owner_username')
+    is_owner = serializers.SerializerMethodField()
+    profile_id = serializers.ReadOnlyField(source='owner.profile.id')
+    profile_image = serializers.ReadOnlyField(source='owner.profile.img.url')
 
     def get_is_owner(self, obj):
         request = self.context['request']

@@ -65,7 +65,7 @@ class PostDetail(generics.RetrieveUpdateDestroyAPIView):
 #             )
 
 
-# class PostDetail(APIView):
+# class PostDetail(APIView): 
 #     """
 #     A view that returns the details of a single post.
 #     """

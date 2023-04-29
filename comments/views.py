@@ -18,7 +18,9 @@ class CommentList(generics.ListCreateAPIView):
     ]
 
     filterset_fields = [
-        # This post id will then be used to filter the comments
+        # We want to be able to retrieve all the comments associated with a given post.
+        # This post id will then be used to filter the comments, as there is a direct relationship
+        # between Comment and Post diagrams
         'post'
     ]
 

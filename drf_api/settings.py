@@ -74,7 +74,7 @@ DEBUG = 'DEV' in os.environ
 #     os.environ.get('ALLOWED_HOST'), 'localhost',
 # ]
 ALLOWED_HOSTS = [
-   os.environ.get('ALLOWED_HOST'),
+   os.environ.get('ALLOWED_HOSTS'),
    'localhost',
 ]
 

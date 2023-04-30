@@ -69,7 +69,7 @@ DEBUG = 'DEV' in os.environ
 
 ALLOWED_HOSTS = [
     '8000-silviasaverino-djangores-vk35nvw6i2.us2.codeanyapp.com',
-    'localhost', 'django_rest_framework_backend.herokuapp.com'
+    'localhost', 'django-rest-framework-backend.herokuapp.com'
 ]
 
 

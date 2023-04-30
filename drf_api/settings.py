@@ -68,10 +68,14 @@ SECRET_KEY = os.getenv('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = 'DEV' in os.environ
 
+# ALLOWED_HOSTS = [
+#     '8000-silviasaverino-djangores-vk35nvw6i2.us2.codeanyapp.com',
+#     # 'django-rest-framework-backend.herokuapp.com', 'localhost'
+#     os.environ.get('ALLOWED_HOST'), 'localhost',
+# ]
 ALLOWED_HOSTS = [
-    '8000-silviasaverino-djangores-vk35nvw6i2.us2.codeanyapp.com',
-    # 'django-rest-framework-backend.herokuapp.com', 'localhost'
-    os.environ.get('ALLOWED_HOST'), 'localhost',
+   os.environ.get('ALLOWED_HOST'),
+   'localhost',
 ]
 
 
